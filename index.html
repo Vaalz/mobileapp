@@ -5,60 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="src/output.css" rel="stylesheet">
 
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<title>Buah Kita</title>
-</head>
-<body>
-  <h1 class="text-2xl font-pacifico py-2 px-5">
-    BuahKita
-  </h1>
-<!-- Kategori -->
- <div>
-  <h1 class="font-medium text-2xl py-2 px-6">Kategori</h1>
- </div>
- <div class="flex py-2">
-  <div class="mx-4 px-3 py-2 border rounded-lg shadow-md">
-    <h1>Buah Musiman</h1>
-  </div>
-  <div class="mx-4 px-3 py-2 border rounded-lg shadow-md">
-    <h1>Buah Tidak Musiman</h1>
-  </div>
- </div>
-<!-- Kategori -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    .font-pacifico {
+      font-family: 'Pacifico', cursive;
+    }
+  </style>
 
-<!-- Buah Populer -->
- <div>
-  <div>
-    <h1 class="font-medium text-2xl py-2 px-6">Buah Populer</h1>
-  </div>
-  <div class="flex">
-    <div class="py-1 px-3">
-      <img src="salak.png" alt="">
+  <title>Buah Kita</title>
+</head>
+<body class="h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b">
+    <h1 class="text-2xl font-pacifico py-2 px-5">BuahKita</h1>
+  </nav>
+
+<!-- Bagian atas: Kategori + Judul Buah Populer -->
+<div class="pt-16 bg-white">
+  <!-- Kategori -->
+  <h1 class="font-medium text-2xl py-2 px-6">Kategori</h1>
+  <div class="flex py-2 px-4">
+    <div class="mx-2 px-3 py-2 border rounded-lg shadow-md hover:bg-primary">
+      <a href="buahMusiman.html"><button>Buah Musiman</button></a>
     </div>
-    <div class="py-1 px-3">
-      <img src="durian.png" alt="">
-    </div>
-  </div>
-  <div class="flex">
-    <div class="py-1 px-3">
-      <img src="salak.png" alt="">
-    </div>
-    <div class="py-1 px-3">
-      <img src="durian.png" alt="">
-    </div>
-  </div>
-  <div class="flex">
-    <div class="py-1 px-3">
-      <img src="salak.png" alt="">
-    </div>
-    <div class="py-1 px-3">
-      <img src="durian.png" alt="">
+    <div class="mx-2 px-3 py-2 border rounded-lg shadow-md hover:bg-primary">
+      <a href="buahTidakMusiman.html"><button>Buah Tidak Musiman</button></a>
     </div>
   </div>
- </div>
-<!-- Buah Populer -->
+
+  <!-- Judul Buah Populer -->
+  <h1 class="font-medium text-2xl py-2 px-6">Buah Populer</h1>
+</div>
+
+<!-- Hanya bagian ini yang bisa scroll -->
+<div class="flex-1 overflow-y-auto px-4 pb-28 bg-white">
+  <div class="grid grid-cols-2 gap-4">
+    <a href="salakHome.html"><img src="image/salak1.png"/></a>
+    <a href="durianHome.html"><img src="image/durian1.png"/></a>
+    <a href="nangkaHome.html"><img src="image/nangka1.png"/></a>
+    <a href="rambutanHome.html"><img src="image/rambutan1.png"/></a>
+    <a href="sawoHome.html"><img src="image/sawo1.png"/></a>
+    <a href="kedondongHome.html"><img src="image/kedondong1.png"/></a>
+  </div>
+</div>
+
+
+  <!--Footer menu-->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white flex border-t py-4 justify-center">
+    <div class="mx-5">
+      <a href="#"><img src="image/home.png" alt=""></a>
+    </div>
+    <div class="mx-5">
+      <a href="#"><img src="image/search.png" alt=""></a>
+    </div>
+    <div class="mx-5">
+      <a href="eksplor.html"><img src="image/Book.png" alt=""></a>
+    </div>
+  </div>
 
 </body>
 </html>

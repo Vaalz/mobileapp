@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         'pacifico': ['Pacifico', 'cursive']
       },
+      colors: {
+        primary: "#FFF500",
+      },
      },
    },
    plugins: [],
