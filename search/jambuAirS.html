@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../src/output.css" rel="stylesheet">
+  <title>Buah Kita</title>
+</head>
+<body class="h-screen flex flex-col bg-white">
+  <!-- Header -->
+  <div class="flex items-center py-6 px-3">
+    <a href="../search.html" class="mr-4"><img src="../image/Exit.png" alt="Exit"></a>
+    <h1 class="font-bold text-3xl text-center w-full -ml-8">Jambu Air</h1>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="flex-1 overflow-y-auto px-4 pb-28">
+    <!-- Image Section -->
+    <div class="relative mb-4">
+      <img src="../image/jambuAir.jpg" alt="Durian" class="w-full h-64 object-cover rounded-lg">
+    </div>
+    
+    <!-- Tab Navigation -->
+<div class="flex border-b mb-4">
+  <button class="flex-1 py-3 px-4 font-medium border-b-2 border-yellow-500" id="tab-deskripsi">
+    <span class="font-semibold text-black">Deskripsi</span>
+  </button>
+  <button class="flex-1 py-3 px-4 font-medium border-b-2 text-gray-400" id="tab-manfaat">
+    <span>Manfaat</span>
+  </button>
+</div>
+
+    
+    <!-- Content Sections -->
+    <div class="mb-4">
+      <!-- Deskripsi Tab Content (Visible by default) -->
+        <div id="content-deskripsi" class="block">
+        <p class="text-sm text-gray-800 leading-relaxed">Jambu air (Syzygium aqueum) adalah buah tropis yang banyak ditemukan di Asia Tenggara, termasuk Indonesia. Buah ini memiliki bentuk menyerupai lonceng, dengan kulit tipis berwarna merah muda, hijau, atau merah tua, dan daging buah yang renyah serta kaya air. Rasanya manis segar, cocok dikonsumsi langsung atau dijadikan rujak dan acar.</p>
+        </div>
+
+<!-- Manfaat Tab Content (Hidden by default) -->
+        <div id="content-manfaat" class="hidden">
+        <ul class="...">
+            <li>-  Mencegah dehidrasi</li>
+            <li>-  Baik untuk pencernaan</li>
+            <li>-  Mengandung vitamin C</li>
+            <li>-  Membantu detoksifikasi tubuh</li>
+            <li>-  Mendukung kesehatan jantung</li>
+            <li>-  Rendah kalori,cocok untuk diet</li>
+        </div>
+
+    </div>
+    
+    
+
+  </div>
+  
+<!-- Footer -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white flex border-t py-4 justify-center">
+    <div class="mx-5">
+      <a href="../index.html"><img src="../image/home.png" alt=""></a>
+    </div>
+    <div class="mx-5">
+      <a href="../search.html"><img src="../image/search.png" alt=""></a>
+    </div>
+    <div class="mx-5">
+      <a href="../eksplor.html"><img src="../image/Book.png" alt=""></a>
+    </div>
+  </div>
+  
+  <script>
+  const tabDeskripsi = document.getElementById('tab-deskripsi');
+  const tabManfaat = document.getElementById('tab-manfaat');
+  const contentDeskripsi = document.getElementById('content-deskripsi');
+  const contentManfaat = document.getElementById('content-manfaat');
+
+  tabDeskripsi.addEventListener('click', function () {
+    // Tab style
+    tabDeskripsi.classList.add('border-yellow-500');
+    tabDeskripsi.querySelector('span').classList.add('font-semibold', 'text-black');
+    tabDeskripsi.querySelector('span').classList.remove('text-gray-400');
+
+    tabManfaat.classList.remove('border-yellow-500');
+    tabManfaat.querySelector('span').classList.remove('font-semibold', 'text-black');
+    tabManfaat.querySelector('span').classList.add('text-gray-400');
+
+    // Tab content
+    contentDeskripsi.classList.remove('hidden');
+    contentDeskripsi.classList.add('block');
+    contentManfaat.classList.add('hidden');
+    contentManfaat.classList.remove('block');
+  });
+
+  tabManfaat.addEventListener('click', function () {
+    // Tab style
+    tabManfaat.classList.add('border-yellow-500');
+    tabManfaat.querySelector('span').classList.add('font-semibold', 'text-black');
+    tabManfaat.querySelector('span').classList.remove('text-gray-400');
+
+    tabDeskripsi.classList.remove('border-yellow-500');
+    tabDeskripsi.querySelector('span').classList.remove('font-semibold', 'text-black');
+    tabDeskripsi.querySelector('span').classList.add('text-gray-400');
+
+    // Tab content
+    contentManfaat.classList.remove('hidden');
+    contentManfaat.classList.add('block');
+    contentDeskripsi.classList.add('hidden');
+    contentDeskripsi.classList.remove('block');
+  });
+</script>
+
+</body>
+</html>
